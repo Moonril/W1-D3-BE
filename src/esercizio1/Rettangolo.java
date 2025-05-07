@@ -1,3 +1,5 @@
+package esercizio1;
+
 public class Rettangolo {
     //variabili
     private int altezza;

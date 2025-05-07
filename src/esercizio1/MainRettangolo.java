@@ -1,3 +1,5 @@
+package esercizio1;
+
 public class MainRettangolo {
     public static void main(String[] args) {
         Rettangolo rettangolo = new Rettangolo(3, 5);
