@@ -1,18 +1,48 @@
 package esercizio3;
 
 public class Carrello {
-    private String clienteAssociato;
-    private String[] elencoArticoli = new String[5];
-    private int totaleCarrello;
+    private Cliente clienteAssociato;
+    private Articolo[] articoli;
+    private double totaleCarrello;
 
 
     //costruttore
 
 
-    public Carrello(String clienteAssociato, String[] elencoArticoli, int totaleCarrello) {
+    public Carrello(Cliente clienteAssociato, Articolo[] articoli) {
         this.clienteAssociato = clienteAssociato;
-        this.elencoArticoli = elencoArticoli;
-        this.totaleCarrello = totaleCarrello;
+        this.articoli = articoli;
+        calcolaTotale();
+    }
+
+    //set get
+
+    public Cliente getClienteAssociato() {
+        return clienteAssociato;
+    }
+
+    public Articolo[] getArticoli() {
+        return articoli;
+    }
+
+    public double getTotaleCarrello() {
+        return totaleCarrello;
+    }
+
+    public void setClienteAssociato(Cliente clienteAssociato) {
+        this.clienteAssociato = clienteAssociato;
+    }
+
+    public void setArticoli(Articolo[] articoli) {
+        this.articoli = articoli;
+        calcolaTotale();
+    }
+
+    //metodo privato, si fanno privati quando non si vuole che vengano chiamati all'esterno
+    private void calcolaTotale(){
+        for (int i = 0; i < articoli.length; i++) {
+            totaleCarrello += articoli[i].getPrezzo();
+        }
     }
 
 }

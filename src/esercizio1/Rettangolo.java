@@ -2,29 +2,22 @@ package esercizio1;
 
 public class Rettangolo {
     //variabili
-    private int altezza;
-    private int base;
+    private double altezza;
+    private double base;
 
     // metodi
 
-    public int perimetro(){
+    public double perimetro(){
         return (base + altezza)*2;
     }
-    public int area(){
+    public double area(){
         return (base * altezza);
     }
 
-    public void stampaRettangolo(){
-        System.out.println(perimetro());
-    }
-
-    public void stampaArea(){
-        System.out.println(area());
-    }
 
     //costruttori
 
-    public Rettangolo(int base, int altezza) {
+    public Rettangolo(double base, double altezza) {
         this.base = base;
         this.altezza = altezza;
     }
@@ -33,19 +26,19 @@ public class Rettangolo {
     //getter and setter
 
 
-    public int getAltezza() {
+    public double getAltezza() {
         return altezza;
     }
 
-    public void setAltezza(int altezza) {
+    public void setAltezza(double altezza) {
         this.altezza = altezza;
     }
 
-    public int getBase() {
+    public double getBase() {
         return base;
     }
 
-    public void setBase(int base) {
+    public void setBase(double base) {
         this.base = base;
     }
 }
